@@ -1,0 +1,15 @@
+package com.studentM;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface StudentDao {
+	boolean saveStudent(Student student);
+	boolean upadteStudent(StudentDao student);
+	boolean deleteStudent (Student student);
+	Student findStudentById(Student student);
+	List<Student> findAllStudent();
+//	Student findStudentById(String id);
+	boolean upadteStudent(Student student) throws SQLException;
+	Student findStudentById(int id);
+}

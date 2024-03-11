@@ -1,0 +1,11 @@
+package com.studentM;
+
+import java.util.List;
+
+public interface StudentDao {
+	boolean saveStudent(Student student);
+	boolean upadteStudent(StudentDao student);
+	boolean deleteStudent (Student student);
+	Student findStudentById(Student student);
+	List<Student> findAllStudent();
+}

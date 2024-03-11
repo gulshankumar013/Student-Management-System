@@ -1,0 +1,52 @@
+<%@page import="com.jsp.exception.StudentNotFoundException"%>
+<%@page import="com.studentM.Student" %>
+<%@page import="com.studentM.StudentDaoImp" %>
+<%@page import="com.studentM.StudentDao" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Information</title>
+</head>
+<body>
+<%
+  String id = request.getParameter("id");
+  if(id != null) {
+    StudentDao dao = new StudentDaoImp();
+    Student student = dao.findStudentById(id);
+    
+    if(student != null) {
+%>
+  <h1>Student Information</h1>
+  
+  <form action=" save" method="post">
+    Enter Student ID: <input type="text" name="id" value="<%= id %>">
+    <input type="submit" value="Submit">
+  </form>
+  
+  <h2>Student Details:</h2>
+  <ul>
+    <li>Roll: <%= student.getRoll() %></li>
+    <li>Name: <%= student.getName() %></li>
+    <li>Email: <%= student.getEmail() %></li>
+    <li>Phone: <%= student.getPhone() %></li>
+    <li>Password: <%= student.getPassword() %></li>
+    <li>Address: <%= student.getAddress() %></li>
+    <li>Age: <%= student.getAge() %></li>
+  </ul>
+<%
+    } else {
+      try {
+        throw new StudentNotFoundException("Student with ID " + id + " not found");
+      } catch(StudentNotFoundException e) {
+%>
+  <h1 style="color:red;"><%= e.getMessage() %></h1>
+<%
+      }
+    }
+  }
+%>
+</body>
+</html>
