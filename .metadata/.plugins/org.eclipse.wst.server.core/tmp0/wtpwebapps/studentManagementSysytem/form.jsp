@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url("/2888873.jpg"); 
+            background-image: url("image/2888873.jpg"); 
             background-size: contain;
             background-position: center;
             height: 100vh;

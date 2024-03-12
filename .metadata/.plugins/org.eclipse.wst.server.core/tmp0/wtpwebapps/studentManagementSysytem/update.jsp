@@ -15,17 +15,18 @@
 	String id = request.getParameter("id");
 	StudentDao dao = new StudentDaoImp();
 	Student student=dao.findStudentById(Integer.parseInt(id));
+	
 %>
 
 <form action="studentupdate"method="post">
-    rollNo:<input type="number" name = "roll" value="<%=student.getRoll() %>">
+    rollNo:<input type="number" name = "roll" value="<%=student.getRoll() %>" readonly="readonly">
 	name:<input type="text" name = "name" value="<%=student.getName()%>">
 	phone:<input number="text" name = "phone" value="<%=student.getPhone() %>">
 	email:<input type="email" name = "email" value="<%=student.getEmail() %>">
 	age:<input type ="number" name = "age"  value="<%=student.getAge() %>">
 	address:<input type="text" name = "address" value="<%=student.getAddress() %>">
 	password:<input type="password" name = "password" value="<%=student.getPassword() %>">
-	submit:<input type = "submit" value= "submit">
+	submit:<input type = "submit" value= "submit">   
 </form>
 </body>
 </html>

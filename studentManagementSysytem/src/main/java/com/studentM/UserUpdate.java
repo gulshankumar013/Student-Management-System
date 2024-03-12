@@ -8,7 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-@WebServlet("/studentUpdate")
+@WebServlet("/studentupdate")
 public class UserUpdate extends HttpServlet {
 		
 	StudentDao dao = new StudentDaoImp();
@@ -33,7 +33,7 @@ public class UserUpdate extends HttpServlet {
 			e.printStackTrace();
 		}
 		if(saveStudent)
-			req.getRequestDispatcher("find.jsp").forward(req,resp);
+			req.getRequestDispatcher("home.jsp").forward(req,resp);
 		else{
 			req.setAttribute("message", message);
 			req.getRequestDispatcher("error.jsp").forward(req, resp);

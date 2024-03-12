@@ -54,3 +54,11 @@
 0:0:0:0:0:0:0:1 - - [11/Mar/2024:18:01:16 +0530] "GET /studentManagementSysytem/Update.jsp?id=1 HTTP/1.1" 404 740
 127.0.0.1 - - [11/Mar/2024:18:12:11 +0530] "GET / HTTP/1.1" 404 751
 0:0:0:0:0:0:0:1 - - [11/Mar/2024:18:12:17 +0530] "GET /studentManagementSysytem/update.jsp HTTP/1.1" 500 7685
+127.0.0.1 - - [11/Mar/2024:18:58:51 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:18:58:57 +0530] "GET /studentManagementSysytem/update.jsp HTTP/1.1" 500 2501
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:19:02:37 +0530] "GET /studentManagementSysytem/update.jsp HTTP/1.1" 500 3236
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:19:03:47 +0530] "GET /studentManagementSysytem/update.jsp HTTP/1.1" 500 3529
+127.0.0.1 - - [11/Mar/2024:20:57:26 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:20:57:28 +0530] "GET /studentManagementSysytem/find.jsp HTTP/1.1" 200 434
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:20:57:34 +0530] "GET /studentManagementSysytem/find.jsp?rollno=1 HTTP/1.1" 200 809
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:20:57:37 +0530] "GET /studentManagementSysytem/Update.jsp?id=1 HTTP/1.1" 404 740

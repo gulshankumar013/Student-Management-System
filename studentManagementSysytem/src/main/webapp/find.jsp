@@ -12,7 +12,7 @@
 </head>
 <body>
     <h2>Find Student By Roll Number</h2>
-    <form action="" method="get">
+    <form action="">
         <label for="rollno">Enter Roll Number:</label><br>
         <input type="text" id="rollno" name="rollno" required><br><br>
         <input type="submit" value="Find">
@@ -37,8 +37,8 @@
         <p>Address: <%= student.getAddress() %></p>
          <p>Password: <%= student.getPassword() %></p>
         
-        <a href="Update.jsp?id=<%=student.getRoll()%>">Update</a>
-        <a href="Delete.jsp?id=<%=student.getRoll()%>">Delete</a>
+        <a href="update.jsp?id=<%=student.getRoll()%>">Update</a>
+        <a href="delete.jsp?id=<%=student.getRoll()%>">Delete</a>
     <% 
             } else {
                 throw new StudentNotFoundException("Student with ID " + rollno + " not found");

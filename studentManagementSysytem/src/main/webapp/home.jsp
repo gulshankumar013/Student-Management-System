@@ -7,6 +7,6 @@
 <title>Welcome</title>
 </head>
 <body>
-
+<a href="find.jsp" >find</a>
 </body>
 </html>

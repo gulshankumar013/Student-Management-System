@@ -12,5 +12,7 @@ public interface StudentDao {
 	Student findStudentById(String id);
 	boolean upadteStudent(Student student) throws SQLException;
 	Student findStudentById();
+	Student findStudentById(Student student);
+	boolean deleteStudent(String id) throws SQLException;
 	
 }

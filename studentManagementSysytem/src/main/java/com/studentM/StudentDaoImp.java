@@ -42,25 +42,28 @@ public class StudentDaoImp implements StudentDao {
 		Connection connection = ConnectionToDatabase.getConnection();
 		
 		PreparedStatement prepareStatement;
-		prepareStatement = connection.prepareStatement("update student set rol=?,name=?,email=?,phone=?,password=?,address=? where roll=?");
+		prepareStatement = connection.prepareStatement("update student set id=?,name=?,email=?,phone=?,password=?,address=?,age=? where id=?");
 		prepareStatement.setLong(1, student.getRoll());
+		prepareStatement.setLong(8, student.getRoll());
 		prepareStatement.setString(2,student.getName());
 		prepareStatement.setString(3, student.getEmail());
 		prepareStatement.setLong(4,student.getPhone() );
 		prepareStatement.setString(5,student.getPassword());
 		prepareStatement.setString(6,student.getAddress());
 		prepareStatement.setLong(7, student.getAge());
-		prepareStatement.setLong(8, student.getRoll());
 		int execute = prepareStatement.executeUpdate();
 		
-		if(execute<0)
+		if(execute>0)
 			return true;
 		return false;
 	}
 
 	@Override
-	public boolean deleteStudent(Student student) {
-		// TODO Auto-generated method stub
+	public boolean deleteStudent(String id) throws SQLException {
+      Connection connection = ConnectionToDatabase.getConnection();
+		PreparedStatement prepareStatement;
+		prepareStatement = connection.prepareStatement("delete from student where id=?");
+		prepareStatement.executeUpdate();
 		return false;
 	}
 
@@ -126,6 +129,12 @@ public class StudentDaoImp implements StudentDao {
 	public Student findStudentById(Student student) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean deleteStudent(Student student) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
